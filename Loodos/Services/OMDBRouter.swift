@@ -24,9 +24,9 @@ enum OMDBRouter {
 	var path: String {
 		switch self {
 		case .detail(let movieID):
-			return "?i=\(movieID)"
+			return "?i=\(movieID)&apikey=\(Constants.apiKey)"
 		case .search(let title, _):
-			return "?s=\(title)"
+			return "?s=\(title)&apikey=\(Constants.apiKey)"
 		}
 	}
 	
@@ -40,8 +40,8 @@ enum OMDBRouter {
 	
 	// MARK: - URLRequestConvertible
 	func asURLRequest() throws -> URLRequest {
-		let baseUrl = try Constants.baseUrl.asURL()
-		var urlRequest = URLRequest(url: baseUrl.appendingPathComponent(path))
+		let url = try (Constants.baseUrl + path).asURL()
+		var urlRequest = URLRequest(url: url)
 		urlRequest.httpMethod = method.rawValue
 		if let parameters = parameters {
 			do {

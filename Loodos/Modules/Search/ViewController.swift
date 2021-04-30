@@ -12,6 +12,10 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
+		
+		OMDBService.shared.execute(requestRoute: .detail(movieID: "tt0944947"), responseModel: MovieResponseModel.self) { movieResponse in
+			print(movieResponse)
+		}
 	}
 
 

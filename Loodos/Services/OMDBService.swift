@@ -17,10 +17,21 @@ final class OMDBService {
 		do {
 			let urlRequest = try requestRoute.asURLRequest()
 			AF.request(urlRequest).validate().responseJSON { response in
-				print(response)
+				switch response.result {
+				case .success(let value):
+					do {
+						let jsonData = try JSONSerialization.data(withJSONObject: value, options: .prettyPrinted)
+						let modelData = try JSONDecoder().decode(responseModel, from: jsonData)
+						completion(.success(modelData))
+					} catch  {
+						completion(.failure(.parseError))
+					}
+				case .failure(_):
+					completion(.failure(.badRequestError))
+				}
 			}
 		} catch  {
-			
+			completion(.failure(.badUrlError))
 		}
 	}
 }

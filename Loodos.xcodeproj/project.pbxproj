@@ -17,6 +17,7 @@
 		990408E1263C867700F116BE /* OMDBRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990408E0263C867700F116BE /* OMDBRouter.swift */; };
 		990408E4263C892100F116BE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990408E3263C892100F116BE /* Constants.swift */; };
 		990408E7263C8B2200F116BE /* OMDBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990408E6263C8B2200F116BE /* OMDBError.swift */; };
+		990408EF263C8DF900F116BE /* MovieResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990408EE263C8DF900F116BE /* MovieResponseModel.swift */; };
 		DB2AECE233865AB952BE6FF5 /* Pods_Loodos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65B629B10ACC6C6DE232C26C /* Pods_Loodos.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		990408E0263C867700F116BE /* OMDBRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBRouter.swift; sourceTree = "<group>"; };
 		990408E3263C892100F116BE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		990408E6263C8B2200F116BE /* OMDBError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBError.swift; sourceTree = "<group>"; };
+		990408EE263C8DF900F116BE /* MovieResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponseModel.swift; sourceTree = "<group>"; };
 		D5F3CD068DB422E374163AC7 /* Pods-Loodos.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loodos.development.xcconfig"; path = "Target Support Files/Pods-Loodos/Pods-Loodos.development.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				99040865263C81E200F116BE /* Application */,
+				990408ED263C8DE700F116BE /* Models */,
 				990408E9263C8CDA00F116BE /* Modules */,
 				99040867263C81F600F116BE /* Resources */,
 				990408DA263C85C200F116BE /* Services */,
@@ -165,6 +168,14 @@
 			children = (
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		990408ED263C8DE700F116BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				990408EE263C8DF900F116BE /* MovieResponseModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		CB1F41963855B2AB5CEC6803 /* Frameworks */ = {
@@ -290,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				990408EF263C8DF900F116BE /* MovieResponseModel.swift in Sources */,
 				990408E4263C892100F116BE /* Constants.swift in Sources */,
 				99040854263C811600F116BE /* ViewController.swift in Sources */,
 				99040850263C811600F116BE /* AppDelegate.swift in Sources */,
