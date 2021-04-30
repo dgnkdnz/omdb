@@ -3,27 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		99040850263C811600F116BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9904084F263C811600F116BE /* AppDelegate.swift */; };
-		99040852263C811600F116BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99040851263C811600F116BE /* SceneDelegate.swift */; };
 		99040854263C811600F116BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99040853263C811600F116BE /* ViewController.swift */; };
 		99040857263C811600F116BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99040855263C811600F116BE /* Main.storyboard */; };
 		99040859263C811600F116BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99040858263C811600F116BE /* Assets.xcassets */; };
 		9904085C263C811600F116BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9904085A263C811600F116BE /* LaunchScreen.storyboard */; };
+		9904086C263C823400F116BE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9904086B263C823400F116BE /* Localizable.strings */; };
+		990408DC263C85E400F116BE /* OMDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990408DB263C85E400F116BE /* OMDBService.swift */; };
+		990408E1263C867700F116BE /* OMDBRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990408E0263C867700F116BE /* OMDBRouter.swift */; };
+		990408E4263C892100F116BE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990408E3263C892100F116BE /* Constants.swift */; };
+		990408E7263C8B2200F116BE /* OMDBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990408E6263C8B2200F116BE /* OMDBError.swift */; };
+		DB2AECE233865AB952BE6FF5 /* Pods_Loodos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65B629B10ACC6C6DE232C26C /* Pods_Loodos.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		504899870B99BB5771753570 /* Pods-Loodos.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loodos.production.xcconfig"; path = "Target Support Files/Pods-Loodos/Pods-Loodos.production.xcconfig"; sourceTree = "<group>"; };
+		65B629B10ACC6C6DE232C26C /* Pods_Loodos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Loodos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9904084C263C811600F116BE /* Loodos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loodos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9904084F263C811600F116BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		99040851263C811600F116BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		99040853263C811600F116BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		99040856263C811600F116BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		99040858263C811600F116BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9904085B263C811600F116BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9904085D263C811600F116BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9904086B263C823400F116BE /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		990408DB263C85E400F116BE /* OMDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBService.swift; sourceTree = "<group>"; };
+		990408E0263C867700F116BE /* OMDBRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBRouter.swift; sourceTree = "<group>"; };
+		990408E3263C892100F116BE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		990408E6263C8B2200F116BE /* OMDBError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBError.swift; sourceTree = "<group>"; };
+		D5F3CD068DB422E374163AC7 /* Pods-Loodos.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loodos.development.xcconfig"; path = "Target Support Files/Pods-Loodos/Pods-Loodos.development.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB2AECE233865AB952BE6FF5 /* Pods_Loodos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		97B2F02BF87123EE0E0ED258 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5F3CD068DB422E374163AC7 /* Pods-Loodos.development.xcconfig */,
+				504899870B99BB5771753570 /* Pods-Loodos.production.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		99040843263C811600F116BE = {
 			isa = PBXGroup;
 			children = (
 				9904084E263C811600F116BE /* Loodos */,
 				9904084D263C811600F116BE /* Products */,
+				97B2F02BF87123EE0E0ED258 /* Pods */,
+				CB1F41963855B2AB5CEC6803 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +80,99 @@
 		9904084E263C811600F116BE /* Loodos */ = {
 			isa = PBXGroup;
 			children = (
-				9904084F263C811600F116BE /* AppDelegate.swift */,
-				99040851263C811600F116BE /* SceneDelegate.swift */,
-				99040853263C811600F116BE /* ViewController.swift */,
-				99040855263C811600F116BE /* Main.storyboard */,
-				99040858263C811600F116BE /* Assets.xcassets */,
-				9904085A263C811600F116BE /* LaunchScreen.storyboard */,
-				9904085D263C811600F116BE /* Info.plist */,
+				99040865263C81E200F116BE /* Application */,
+				990408E9263C8CDA00F116BE /* Modules */,
+				99040867263C81F600F116BE /* Resources */,
+				990408DA263C85C200F116BE /* Services */,
+				9904086F263C823F00F116BE /* Supporting Files */,
 			);
 			path = Loodos;
+			sourceTree = "<group>";
+		};
+		99040865263C81E200F116BE /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				9904084F263C811600F116BE /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		99040867263C81F600F116BE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				99040858263C811600F116BE /* Assets.xcassets */,
+				99040868263C81FE00F116BE /* Strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		99040868263C81FE00F116BE /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				9904086B263C823400F116BE /* Localizable.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		9904086F263C823F00F116BE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9904085D263C811600F116BE /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		990408DA263C85C200F116BE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				990408DB263C85E400F116BE /* OMDBService.swift */,
+				990408E0263C867700F116BE /* OMDBRouter.swift */,
+				990408E3263C892100F116BE /* Constants.swift */,
+				990408E6263C8B2200F116BE /* OMDBError.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		990408E9263C8CDA00F116BE /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				990408EC263C8CFC00F116BE /* Detail */,
+				990408EB263C8CF300F116BE /* Search */,
+				990408EA263C8CED00F116BE /* Launch */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		990408EA263C8CED00F116BE /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				9904085A263C811600F116BE /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		990408EB263C8CF300F116BE /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				99040853263C811600F116BE /* ViewController.swift */,
+				99040855263C811600F116BE /* Main.storyboard */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		990408EC263C8CFC00F116BE /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		CB1F41963855B2AB5CEC6803 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65B629B10ACC6C6DE232C26C /* Pods_Loodos.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +182,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 99040860263C811600F116BE /* Build configuration list for PBXNativeTarget "Loodos" */;
 			buildPhases = (
+				0C82B77E4E6D00BF77BEDB36 /* [CP] Check Pods Manifest.lock */,
 				99040848263C811600F116BE /* Sources */,
 				99040849263C811600F116BE /* Frameworks */,
 				9904084A263C811600F116BE /* Resources */,
+				75A9321388B741F6AD26725E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9904085C263C811600F116BE /* LaunchScreen.storyboard in Resources */,
+				9904086C263C823400F116BE /* Localizable.strings in Resources */,
 				99040859263C811600F116BE /* Assets.xcassets in Resources */,
 				99040857263C811600F116BE /* Main.storyboard in Resources */,
 			);
@@ -132,14 +243,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C82B77E4E6D00BF77BEDB36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Loodos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75A9321388B741F6AD26725E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Loodos/Pods-Loodos-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Loodos/Pods-Loodos-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Loodos/Pods-Loodos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		99040848263C811600F116BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				990408E4263C892100F116BE /* Constants.swift in Sources */,
 				99040854263C811600F116BE /* ViewController.swift in Sources */,
 				99040850263C811600F116BE /* AppDelegate.swift in Sources */,
-				99040852263C811600F116BE /* SceneDelegate.swift in Sources */,
+				990408E1263C867700F116BE /* OMDBRouter.swift in Sources */,
+				990408E7263C8B2200F116BE /* OMDBError.swift in Sources */,
+				990408DC263C85E400F116BE /* OMDBService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +321,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		9904085E263C811600F116BE /* Debug */ = {
+		9904085E263C811600F116BE /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -224,9 +380,9 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = Development;
 		};
-		9904085F263C811600F116BE /* Release */ = {
+		9904085F263C811600F116BE /* Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -279,15 +435,16 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Production;
 		};
-		99040861263C811600F116BE /* Debug */ = {
+		99040861263C811600F116BE /* Development */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5F3CD068DB422E374163AC7 /* Pods-Loodos.development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Loodos/Info.plist;
+				INFOPLIST_FILE = "Loodos/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -297,15 +454,16 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = Development;
 		};
-		99040862263C811600F116BE /* Release */ = {
+		99040862263C811600F116BE /* Production */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 504899870B99BB5771753570 /* Pods-Loodos.production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Loodos/Info.plist;
+				INFOPLIST_FILE = "Loodos/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +473,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Release;
+			name = Production;
 		};
 /* End XCBuildConfiguration section */
 
@@ -323,20 +481,20 @@
 		99040847263C811600F116BE /* Build configuration list for PBXProject "Loodos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9904085E263C811600F116BE /* Debug */,
-				9904085F263C811600F116BE /* Release */,
+				9904085E263C811600F116BE /* Development */,
+				9904085F263C811600F116BE /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Production;
 		};
 		99040860263C811600F116BE /* Build configuration list for PBXNativeTarget "Loodos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				99040861263C811600F116BE /* Debug */,
-				99040862263C811600F116BE /* Release */,
+				99040861263C811600F116BE /* Development */,
+				99040862263C811600F116BE /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Production;
 		};
 /* End XCConfigurationList section */
 	};
