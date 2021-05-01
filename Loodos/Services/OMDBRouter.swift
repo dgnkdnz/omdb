@@ -24,9 +24,15 @@ enum OMDBRouter {
 	var path: String {
 		switch self {
 		case .detail(let movieID):
-			return "?i=\(movieID)&apikey=\(Constants.apiKey)"
-		case .search(let title, _):
-			return "?s=\(title)&apikey=\(Constants.apiKey)"
+			guard let encodingMovieID = movieID.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
+				return ""
+			}
+			return "?i=\(encodingMovieID)&apikey=\(Constants.apiKey)"
+		case .search(let title, let page):
+			guard let encodingTitle = title.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
+				return ""
+			}
+			return "?s=\(encodingTitle)&page=\(page)&apikey=\(Constants.apiKey)"
 		}
 	}
 	

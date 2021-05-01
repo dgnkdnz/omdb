@@ -12,6 +12,9 @@ open class BaseViewController<T: BasePresenterProtocol>: UIViewController {
 	// MARK: - Public variables
 	
 	var presenter: T!
+	open override var preferredStatusBarStyle: UIStatusBarStyle {
+		return .lightContent
+	}
 	
 	// MARK: - LifeCycle Methods
 	
@@ -23,5 +26,6 @@ open class BaseViewController<T: BasePresenterProtocol>: UIViewController {
 	// MARK: - ViewController Methods
 	
 	open func prepare() {
+		self.navigationController?.setNavigationBarHidden(true, animated: false)
 	}
 }

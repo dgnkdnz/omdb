@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Loodos
+
+  Created by Doğan akdeniz on 30.04.2021.
+  
+*/
+
+"search.placeholder" = "Search by title";
+"search.emptyCollectionView" = "Nothing to show :(";

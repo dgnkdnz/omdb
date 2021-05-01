@@ -8,7 +8,13 @@
 import Foundation
 import Alamofire
 
-final class OMDBService {
+protocol OMDBServiceProtocol {
+	func execute<M: Codable>(requestRoute: OMDBRouter,
+							 responseModel: M.Type,
+							 completion: @escaping (Swift.Result<M, OMDBError>) -> Void)
+}
+
+final class OMDBService: OMDBServiceProtocol {
 	static let shared = OMDBService()
 	
 	func execute<M: Codable>(requestRoute: OMDBRouter,
