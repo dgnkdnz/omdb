@@ -8,3 +8,9 @@
 
 "search.placeholder" = "Başlığa göre ara";
 "search.emptyCollectionView" = "Gösterecek bir şey yok :(";
+
+"detail.genre" = "Tür";
+"detail.writer" = "Yazar";
+"detail.actors" = "Oyuncular";
+"detail.language" = "Dil";
+"detail.awards" = "Ödüller";

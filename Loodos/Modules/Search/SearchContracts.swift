@@ -10,6 +10,7 @@
 protocol SearchInteractorProtocol: class {
 	var delegate: SearchInteractorDelegate? { get set }
 	func search(title: String)
+	func detail(withIndex index: Int)
 	func loadMore()
 }
 
@@ -17,7 +18,7 @@ enum SearchInteractorOutput {
 	case setLoading(Bool)
 	case showMovies([MovieResponseModel])
 	case moreMovies([MovieResponseModel])
-	case showMovieDetail(Bool)
+	case showMovieDetail(MovieResponseModel)
 	case failure(String)
 }
 
@@ -43,7 +44,7 @@ enum SearchPresenterOutput {
 // MARK: - Router
 
 enum SearchRoute {
-	case detail(Bool)
+	case detail(MovieResponseModel)
 }
 
 protocol SearchRouterProtocol: class {

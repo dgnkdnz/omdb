@@ -26,6 +26,8 @@ final class SearchInteractor: SearchInteractorProtocol {
 		self.omdbService = omdbService
 	}
 	
+	// MARK: - Interactor Methods
+	
 	func search(title: String) {
 		self.delegate?.handleOutput(.setLoading(true))
 		self.omdbService.execute(requestRoute: .search(title: title, page: 1),
@@ -37,11 +39,11 @@ final class SearchInteractor: SearchInteractorProtocol {
 				self?.setPageVariables()
 				self?.movies = data.search ?? []
 				self?.delegate?.handleOutput(.showMovies(data.search ?? []))
-				self?.delegate?.handleOutput(.setLoading(false))
 			case .failure(let error):
 				print(error)
 				break
 			}
+			self?.delegate?.handleOutput(.setLoading(false))
 		}
 	}
 	
@@ -55,14 +57,34 @@ final class SearchInteractor: SearchInteractorProtocol {
 				self?.currentPage += 1
 				self?.movies.append(contentsOf: data.search ?? [])
 				self?.delegate?.handleOutput(.moreMovies(data.search ?? []))
-				self?.delegate?.handleOutput(.setLoading(false))
 				break
 			case .failure(let error):
 				print(error)
 				break
 			}
+			self?.delegate?.handleOutput(.setLoading(false))
 		}
 	}
+	
+	func detail(withIndex index: Int) {
+		if let movieID = self.movies[index].imdbID {
+			self.delegate?.handleOutput(.setLoading(true))
+			self.omdbService.execute(requestRoute: OMDBRouter.detail(movieID: movieID),
+									 responseModel: MovieResponseModel.self) { [weak self] response in
+				switch response {
+				case .success(let movie):
+					self?.delegate?.handleOutput(.showMovieDetail(movie))
+					break
+				case .failure(let error):
+					print(error)
+					break
+				}
+				self?.delegate?.handleOutput(.setLoading(false))
+			}
+		}
+	}
+	
+	// MARK: - Helper Methods
 	
 	private func setPageVariables() {
 		let mod = totalResults % 10

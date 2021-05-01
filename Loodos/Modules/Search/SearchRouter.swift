@@ -21,6 +21,11 @@ final class SearchRouter: SearchRouterProtocol {
 	}
 	
 	func navigate(to route: SearchRoute, delegate: SearchProtocol?) {
-		
+		switch route {
+		case .detail(let movie):
+			let detailView = DetailBuilder.build(movieDetail: movie)
+			self.view?.show(detailView, sender: nil)
+			break
+		}
 	}
 }

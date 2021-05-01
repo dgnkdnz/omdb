@@ -38,7 +38,7 @@ final class SearchPresenter: SearchPresenterProtocol {
 	}
 	
 	func movieDetail(withIndex index: Int) {
-		
+		self.interactor.detail(withIndex: index)
 	}
 }
 
@@ -55,6 +55,9 @@ extension SearchPresenter: SearchInteractorDelegate {
 		case .moreMovies(let movies):
 			let moviePresentations = movies.map({ MoviePresentation(movie: $0) })
 			self.view?.handleOutput(.moreMovies(moviePresentations))
+			break
+		case .showMovieDetail(let movie):
+			self.router.navigate(to: .detail(movie), delegate: nil)
 			break
 		default:
 			break

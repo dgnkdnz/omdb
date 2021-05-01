@@ -122,6 +122,10 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
 		return cell
 	}
 	
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		self.presenter.movieDetail(withIndex: indexPath.row)
+	}
+	
 	func scrollViewDidScroll(_ scrollView: UIScrollView) {
 		let offsetY = scrollView.contentOffset.y
 		let contentHeight = scrollView.contentSize.height
