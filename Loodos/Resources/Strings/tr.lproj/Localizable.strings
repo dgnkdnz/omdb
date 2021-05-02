@@ -6,6 +6,11 @@
   
 */
 
+"general.ok" = "Tamam";
+
+"splash.networkErrorTitle" = "Ağ Hatası";
+"splash.networkErrorMessage" = "İnternet bağlantısı yok";
+
 "search.placeholder" = "Başlığa göre ara";
 "search.emptyCollectionView" = "Gösterecek bir şey yok :(";
 

@@ -11,5 +11,6 @@ let app = AppContainer()
 
 final class AppContainer {
 	let omdbService = OMDBService.shared
+	let networkService = NetworkService.shared
 	let router = AppRouter()
 }

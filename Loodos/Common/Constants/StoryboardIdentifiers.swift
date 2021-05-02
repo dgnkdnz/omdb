@@ -7,5 +7,6 @@
 
 enum StoryboardIdentifiers: String {
 	case searchViewController = "SearchViewController"
+	case splashViewController = "SplashViewController"
 	case detailViewController = "DetailViewController"
 }

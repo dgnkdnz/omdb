@@ -6,6 +6,11 @@
   
 */
 
+"general.ok" = "Ok";
+
+"splash.networkErrorTitle" = "Network Error";
+"splash.networkErrorMessage" = "No internet connection";
+
 "search.placeholder" = "Search by title";
 "search.emptyCollectionView" = "Nothing to show :(";
 

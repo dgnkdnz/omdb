@@ -15,7 +15,7 @@ final class AppRouter {
 	}
 	
 	func start() {
-		let viewController = SearchBuilder.build()
+		let viewController = SplashBuilder.build()
 		let navigationController = UINavigationController(rootViewController: viewController)
 		window.rootViewController = navigationController
 		window.makeKeyAndVisible()

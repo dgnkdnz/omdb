@@ -46,6 +46,14 @@
 		99040968263DD03000F116BE /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99040967263DD03000F116BE /* UICollectionViewExtension.swift */; };
 		9904096C263DD51A00F116BE /* DetailPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9904096B263DD51A00F116BE /* DetailPresentation.swift */; };
 		99040971263DDDF300F116BE /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99040970263DDDF300F116BE /* BaseLabel.swift */; };
+		99A267F8263EBBAB007A33DD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A267F7263EBBAB007A33DD /* NetworkService.swift */; };
+		99A267FC263EBE80007A33DD /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A267FB263EBE80007A33DD /* SplashRouter.swift */; };
+		99A26800263EBE89007A33DD /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A267FF263EBE89007A33DD /* SplashInteractor.swift */; };
+		99A26803263EBE94007A33DD /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A26802263EBE94007A33DD /* SplashPresenter.swift */; };
+		99A26806263EBEA7007A33DD /* SplashBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A26805263EBEA7007A33DD /* SplashBuilder.swift */; };
+		99A26809263EBEB2007A33DD /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99A26808263EBEB2007A33DD /* Splash.storyboard */; };
+		99A2680C263EBEBF007A33DD /* SplashContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A2680B263EBEBF007A33DD /* SplashContracts.swift */; };
+		99A26811263EBED1007A33DD /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A26810263EBED1007A33DD /* SplashViewController.swift */; };
 		DB2AECE233865AB952BE6FF5 /* Pods_Loodos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65B629B10ACC6C6DE232C26C /* Pods_Loodos.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +102,14 @@
 		99040967263DD03000F116BE /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		9904096B263DD51A00F116BE /* DetailPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresentation.swift; sourceTree = "<group>"; };
 		99040970263DDDF300F116BE /* BaseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
+		99A267F7263EBBAB007A33DD /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		99A267FB263EBE80007A33DD /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
+		99A267FF263EBE89007A33DD /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
+		99A26802263EBE94007A33DD /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		99A26805263EBEA7007A33DD /* SplashBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashBuilder.swift; sourceTree = "<group>"; };
+		99A26808263EBEB2007A33DD /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		99A2680B263EBEBF007A33DD /* SplashContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashContracts.swift; sourceTree = "<group>"; };
+		99A26810263EBED1007A33DD /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		D5F3CD068DB422E374163AC7 /* Pods-Loodos.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loodos.development.xcconfig"; path = "Target Support Files/Pods-Loodos/Pods-Loodos.development.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +204,7 @@
 		990408DA263C85C200F116BE /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				99A267F7263EBBAB007A33DD /* NetworkService.swift */,
 				990408E3263C892100F116BE /* Constants.swift */,
 				990408E6263C8B2200F116BE /* OMDBError.swift */,
 				990408E0263C867700F116BE /* OMDBRouter.swift */,
@@ -202,6 +219,7 @@
 				990408EC263C8CFC00F116BE /* Detail */,
 				990408EA263C8CED00F116BE /* Launch */,
 				990408EB263C8CF300F116BE /* Search */,
+				99A267FA263EBE6F007A33DD /* Splash */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -277,6 +295,7 @@
 				99040936263D9D2D00F116BE /* Constants */,
 				9904096F263DDDE800F116BE /* Controls */,
 				9904093B263D9D5E00F116BE /* Extensions */,
+				99A267F6263EBB81007A33DD /* Helpers */,
 				9904092D263C9A1500F116BE /* Protocols */,
 				99040928263C99E400F116BE /* Views */,
 			);
@@ -341,6 +360,35 @@
 				99040970263DDDF300F116BE /* BaseLabel.swift */,
 			);
 			path = Controls;
+			sourceTree = "<group>";
+		};
+		99A267F6263EBB81007A33DD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		99A267FA263EBE6F007A33DD /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				99A2680F263EBEC9007A33DD /* Views */,
+				99A26808263EBEB2007A33DD /* Splash.storyboard */,
+				99A26805263EBEA7007A33DD /* SplashBuilder.swift */,
+				99A2680B263EBEBF007A33DD /* SplashContracts.swift */,
+				99A267FF263EBE89007A33DD /* SplashInteractor.swift */,
+				99A26802263EBE94007A33DD /* SplashPresenter.swift */,
+				99A267FB263EBE80007A33DD /* SplashRouter.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		99A2680F263EBEC9007A33DD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				99A26810263EBED1007A33DD /* SplashViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CB1F41963855B2AB5CEC6803 /* Frameworks */ = {
@@ -417,6 +465,7 @@
 				99040859263C811600F116BE /* Assets.xcassets in Resources */,
 				99040922263C994800F116BE /* Detail.storyboard in Resources */,
 				990408F7263C982A00F116BE /* Search.storyboard in Resources */,
+				99A26809263EBEB2007A33DD /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,9 +525,11 @@
 				990408FB263C984300F116BE /* SearchViewController.swift in Sources */,
 				99040938263D9D3900F116BE /* Storyboards.swift in Sources */,
 				9904092A263C99F700F116BE /* BaseViewController.swift in Sources */,
+				99A2680C263EBEBF007A33DD /* SplashContracts.swift in Sources */,
 				99040916263C992300F116BE /* DetailContracts.swift in Sources */,
 				9904090B263C98DB00F116BE /* SearchContracts.swift in Sources */,
 				99040952263DA46000F116BE /* SearchCollectionViewCell.swift in Sources */,
+				99A267F8263EBBAB007A33DD /* NetworkService.swift in Sources */,
 				99040919263C992C00F116BE /* DetailInteractor.swift in Sources */,
 				99040957263DA69600F116BE /* MoviePresentation.swift in Sources */,
 				9904093D263D9D7100F116BE /* UIStoryboardExtension.swift in Sources */,
@@ -498,10 +549,15 @@
 				9904092F263C9A2C00F116BE /* BasePresenterProtocol.swift in Sources */,
 				99040968263DD03000F116BE /* UICollectionViewExtension.swift in Sources */,
 				99040912263C991800F116BE /* DetailBuilder.swift in Sources */,
+				99A26806263EBEA7007A33DD /* SplashBuilder.swift in Sources */,
+				99A267FC263EBE80007A33DD /* SplashRouter.swift in Sources */,
+				99A26800263EBE89007A33DD /* SplashInteractor.swift in Sources */,
 				9904091F263C993D00F116BE /* DetailRouter.swift in Sources */,
 				99040934263D9AFC00F116BE /* MovieSearchResponseModel.swift in Sources */,
 				990408DC263C85E400F116BE /* OMDBService.swift in Sources */,
+				99A26803263EBE94007A33DD /* SplashPresenter.swift in Sources */,
 				9904090E263C98E700F116BE /* SearchBuilder.swift in Sources */,
+				99A26811263EBED1007A33DD /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,5 +9,6 @@ import Foundation
 
 enum Storyboards: String {
 	case search = "Search"
+	case splash = "Splash"
 	case detail = "Detail"
 }
