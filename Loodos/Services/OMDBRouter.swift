@@ -27,12 +27,12 @@ enum OMDBRouter {
 			guard let encodingMovieID = movieID.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
 				return ""
 			}
-			return "?i=\(encodingMovieID)&apikey=\(Constants.apiKey)"
+			return "/?i=\(encodingMovieID)&apikey=\(Constants.apiKey)"
 		case .search(let title, let page):
 			guard let encodingTitle = title.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
 				return ""
 			}
-			return "?s=\(encodingTitle)&page=\(page)&apikey=\(Constants.apiKey)"
+			return "/?s=\(encodingTitle)&page=\(page)&apikey=\(Constants.apiKey)"
 		}
 	}
 	

@@ -18,6 +18,10 @@ end
 
 target 'Loodos' do
 	project 'Loodos.xcodeproj'
-  use_frameworks!
+	use_frameworks!
 	my_pods
+	
+	target 'LoodosTests' do
+		inherit! :search_paths
+	end
 end

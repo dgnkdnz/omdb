@@ -28,6 +28,16 @@
       selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "99A268C0263F1A04007A33DD"
+               BuildableName = "LoodosTests.xctest"
+               BlueprintName = "LoodosTests"
+               ReferencedContainer = "container:Loodos.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
