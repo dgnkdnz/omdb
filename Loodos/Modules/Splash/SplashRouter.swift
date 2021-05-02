@@ -16,6 +16,12 @@ final class SplashRouter: SplashRouterProtocol {
 	}
 	
 	func navigate(to route: SplashRoute) {
-		
+		switch route {
+		case .search:
+			self.view?.navigationController?.popViewController(animated: false)
+			let searchView = SearchBuilder.build()
+			self.view?.navigationController?.pushViewController(searchView, animated: true)
+			break
+		}
 	}
 }

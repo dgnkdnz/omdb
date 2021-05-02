@@ -10,10 +10,12 @@
 protocol SplashInteractorProtocol: class {
 	var delegate: SplashInteractorDelegate? { get set }
 	func load()
+	func fetchRemoteConfigs()
 }
 
 enum SplashInteractorOutput {
 	case isConnectedToNetwork(Bool)
+	case updateTitle(String)
 }
 
 protocol SplashInteractorDelegate {
@@ -24,15 +26,19 @@ protocol SplashInteractorDelegate {
 
 protocol SplashPresenterProtocol: BasePresenterProtocol {
 	func load()
+	func fetchRemoteConfigs()
+	func showSearch()
 }
 
 enum SplashPresenterOutput {
 	case isConnectedToNetwork(Bool)
+	case updateTitle(String)
 }
 
 // MARK: - Router
 
 enum SplashRoute {
+	case search
 }
 
 protocol SplashRouterProtocol: class {

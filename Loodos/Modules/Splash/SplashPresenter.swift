@@ -27,6 +27,14 @@ final class SplashPresenter: SplashPresenterProtocol {
 	func load() {
 		self.interactor.load()
 	}
+	
+	func fetchRemoteConfigs() {
+		self.interactor.fetchRemoteConfigs()
+	}
+	
+	func showSearch() {
+		self.router.navigate(to: .search)
+	}
 }
 
 extension SplashPresenter: SplashInteractorDelegate {
@@ -34,6 +42,9 @@ extension SplashPresenter: SplashInteractorDelegate {
 		switch output {
 		case .isConnectedToNetwork(let isConnected):
 			self.view?.handleOutput(.isConnectedToNetwork(isConnected))
+			break
+		case .updateTitle(let title):
+			self.view?.handleOutput(.updateTitle(title))
 			break
 		}
 	}

@@ -9,6 +9,10 @@ import UIKit
 
 final class SplashViewController: BaseViewController<SplashPresenter> {
 	
+	// MARK: - IBOutlets
+	
+	@IBOutlet private weak var titleLabel: UILabel!
+	
 	private var isConnected = false
 	
 	override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -30,7 +34,7 @@ final class SplashViewController: BaseViewController<SplashPresenter> {
 	
 	private func handleNetworks(_ isConnected: Bool) {
 		if isConnected {
-			
+			self.presenter.fetchRemoteConfigs()
 		} else {
 			let strTitle = NSLocalizedString("splash.networkErrorTitle", comment: "")
 			let strMessage = NSLocalizedString("splash.networkErrorMessage", comment: "")
@@ -41,6 +45,12 @@ final class SplashViewController: BaseViewController<SplashPresenter> {
 			self.present(alert, animated: true, completion: nil)
 		}
 	}
+	
+	private func startTimerForNavigate() {
+		DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
+			self?.presenter.showSearch()
+		}
+	}
 }
 
 extension SplashViewController: SplashViewProtocol {
@@ -48,6 +58,10 @@ extension SplashViewController: SplashViewProtocol {
 		switch output {
 		case .isConnectedToNetwork(let isConnected):
 			self.isConnected = isConnected
+			break
+		case .updateTitle(let title):
+			self.titleLabel.text = title
+			self.startTimerForNavigate()
 			break
 		}
 	}

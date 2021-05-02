@@ -24,6 +24,7 @@ final class SearchInteractor: SearchInteractorProtocol {
 	
 	init(omdbService: OMDBServiceProtocol) {
 		self.omdbService = omdbService
+		
 	}
 	
 	// MARK: - Interactor Methods

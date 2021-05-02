@@ -10,6 +10,8 @@ $alamofire_version = '~> 5.2'
 
 def my_pods
 	pod 'Alamofire', $alamofire_version
+	pod 'Firebase/Core'
+	pod 'Firebase/RemoteConfig'
 end
 
 target 'Loodos' do
