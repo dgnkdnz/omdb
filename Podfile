@@ -7,11 +7,13 @@ project 'Loodos', {
 }
 
 $alamofire_version = '~> 5.2'
+$kingfisher_version =  '~> 6.0'
 
 def my_pods
 	pod 'Alamofire', $alamofire_version
 	pod 'Firebase/Core'
 	pod 'Firebase/RemoteConfig'
+	pod 'Kingfisher', $kingfisher_version
 end
 
 target 'Loodos' do

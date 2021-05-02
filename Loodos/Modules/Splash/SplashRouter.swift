@@ -9,11 +9,17 @@ import UIKit
 
 final class SplashRouter: SplashRouterProtocol {
 	
-	weak var view: UIViewController?
+	// MARK: - Private Variables
+	
+	private weak var view: UIViewController?
+	
+	// MARK: - Initialization Methods
 	
 	init(view: UIViewController) {
 		self.view = view
 	}
+	
+	// MARK: - Router Methods
 	
 	func navigate(to route: SplashRoute) {
 		switch route {

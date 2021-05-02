@@ -8,6 +8,7 @@
 
 "general.ok" = "Ok";
 
+"splash.alertError" = "Error";
 "splash.networkErrorTitle" = "Network Error";
 "splash.networkErrorMessage" = "No internet connection";
 

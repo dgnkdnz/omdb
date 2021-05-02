@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SearchCollectionViewCell: UICollectionViewCell {
 	
@@ -20,9 +21,9 @@ class SearchCollectionViewCell: UICollectionViewCell {
 	}
 	
 	func configure(withMovie movie: MoviePresentation) {
-		self.label.text = movie.title ?? ""
+		self.label.text = movie.title
 		if let posterUrl = movie.posterUrl {
-			self.imageView.setImage(withUrl: posterUrl)
+			self.imageView.kf.setImage(with: posterUrl)
 		}
 	}
 

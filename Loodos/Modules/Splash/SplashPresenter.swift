@@ -15,6 +15,8 @@ final class SplashPresenter: SplashPresenterProtocol {
 	private let interactor: SplashInteractorProtocol
 	private let router: SplashRouterProtocol
 	
+	// MARK: - Initialization Methods
+	
 	init(view: SplashViewProtocol,
 		 interactor: SplashInteractorProtocol,
 		 router: SplashRouterProtocol) {
@@ -23,6 +25,8 @@ final class SplashPresenter: SplashPresenterProtocol {
 		self.router = router
 		self.interactor.delegate = self
 	}
+	
+	// MARK: - Presenter Methods
 	
 	func load() {
 		self.interactor.load()
@@ -45,6 +49,9 @@ extension SplashPresenter: SplashInteractorDelegate {
 			break
 		case .updateTitle(let title):
 			self.view?.handleOutput(.updateTitle(title))
+			break
+		case .error(let message):
+			self.view?.handleOutput(.error(message))
 			break
 		}
 	}

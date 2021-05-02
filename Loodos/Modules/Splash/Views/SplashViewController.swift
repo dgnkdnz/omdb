@@ -63,6 +63,13 @@ extension SplashViewController: SplashViewProtocol {
 			self.titleLabel.text = title
 			self.startTimerForNavigate()
 			break
+		case .error(let message):
+			let strTitle = NSLocalizedString("splash.alertError", comment: "")
+			let strOk = NSLocalizedString("general.ok", comment: "")
+			let alert = UIAlertController(title: strTitle, message: message, preferredStyle: .alert)
+			let ok = UIAlertAction(title: strOk, style: .default, handler: nil)
+			alert.addAction(ok)
+			self.present(alert, animated: true, completion: nil)
 		}
 	}
 }

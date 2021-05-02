@@ -10,22 +10,27 @@ import FirebaseRemoteConfig
 
 final class SplashInteractor: SplashInteractorProtocol {
 	
+	// MARK: - Private Variables
+	
 	private let networkService: NetworkServiceProtocol
 	private let remoteConfigService: RemoteConfig
 	
 	var delegate: SplashInteractorDelegate?
+	
+	// MARK: - Initialization Methods
 	
 	init(networkService: NetworkServiceProtocol, remoteConfigService: RemoteConfig) {
 		self.networkService = networkService
 		self.remoteConfigService = remoteConfigService
 	}
 	
+	// MARK: - Interactor Methods
+	
 	func load() {
 		self.delegate?.handleOutput(.isConnectedToNetwork(self.networkService.isConnectedToNetwork()))
 	}
 	
 	func fetchRemoteConfigs() {
-		
 		let loodosKey = "loodos_text"
 		
 		let defaults: [String: NSObject] = [
@@ -53,7 +58,7 @@ final class SplashInteractor: SplashInteractorProtocol {
 					}
 				}
 			} else {
-				
+				self.delegate?.handleOutput(.error(error?.localizedDescription ?? ""))
 			}
 		}
 	}

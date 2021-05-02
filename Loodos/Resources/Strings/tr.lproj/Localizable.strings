@@ -8,6 +8,7 @@
 
 "general.ok" = "Tamam";
 
+"splash.alertError" = "Hata";
 "splash.networkErrorTitle" = "Ağ Hatası";
 "splash.networkErrorMessage" = "İnternet bağlantısı yok";
 

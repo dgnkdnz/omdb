@@ -16,6 +16,7 @@ protocol SplashInteractorProtocol: class {
 enum SplashInteractorOutput {
 	case isConnectedToNetwork(Bool)
 	case updateTitle(String)
+	case error(String)
 }
 
 protocol SplashInteractorDelegate {
@@ -33,6 +34,7 @@ protocol SplashPresenterProtocol: BasePresenterProtocol {
 enum SplashPresenterOutput {
 	case isConnectedToNetwork(Bool)
 	case updateTitle(String)
+	case error(String)
 }
 
 // MARK: - Router

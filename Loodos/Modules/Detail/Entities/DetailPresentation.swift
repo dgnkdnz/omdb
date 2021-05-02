@@ -17,7 +17,11 @@ struct DetailPresentation {
 	let awards: String
 	
 	init(movieDetail: MovieResponseModel) {
-		self.posterUrl = URL(string: movieDetail.poster ?? "")
+		if let poster = movieDetail.poster, poster != "N/A" {
+			self.posterUrl = URL(string: poster)
+		} else {
+			self.posterUrl = URL(string: CommonConstants.defaultPosterString)
+		}
 		self.title = movieDetail.title ?? ""
 		self.genre = movieDetail.genre ?? ""
 		self.writer = movieDetail.writer ?? ""
