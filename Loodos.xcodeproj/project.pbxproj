@@ -231,8 +231,8 @@
 		990408DA263C85C200F116BE /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				99A267F7263EBBAB007A33DD /* NetworkService.swift */,
 				990408E3263C892100F116BE /* Constants.swift */,
+				99A267F7263EBBAB007A33DD /* NetworkService.swift */,
 				990408E6263C8B2200F116BE /* OMDBError.swift */,
 				990408E0263C867700F116BE /* OMDBRouter.swift */,
 				990408DB263C85E400F116BE /* OMDBService.swift */,
@@ -322,7 +322,6 @@
 				99040936263D9D2D00F116BE /* Constants */,
 				9904096F263DDDE800F116BE /* Controls */,
 				9904093B263D9D5E00F116BE /* Extensions */,
-				99A267F6263EBB81007A33DD /* Helpers */,
 				9904092D263C9A1500F116BE /* Protocols */,
 				99040928263C99E400F116BE /* Views */,
 			);
@@ -349,9 +348,9 @@
 		99040936263D9D2D00F116BE /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				99A26849263EE294007A33DD /* CommonConstants.swift */,
 				9904093F263D9DA200F116BE /* StoryboardIdentifiers.swift */,
 				99040937263D9D3900F116BE /* Storyboards.swift */,
-				99A26849263EE294007A33DD /* CommonConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -380,13 +379,6 @@
 				99040970263DDDF300F116BE /* BaseLabel.swift */,
 			);
 			path = Controls;
-			sourceTree = "<group>";
-		};
-		99A267F6263EBB81007A33DD /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		99A267FA263EBE6F007A33DD /* Splash */ = {
