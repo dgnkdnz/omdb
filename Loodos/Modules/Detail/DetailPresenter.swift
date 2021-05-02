@@ -36,6 +36,7 @@ final class DetailPresenter: DetailPresenterProtocol {
 	func load() {
 		let movieDetailPresentation = DetailPresentation(movieDetail: movieDetail)
 		self.view?.handleOutput(.showMovieDetail(movieDetailPresentation))
+		self.interactor.logEvent(withMovie: self.movieDetail)
 	}
 }
 

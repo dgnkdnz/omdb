@@ -9,6 +9,7 @@
 
 protocol DetailInteractorProtocol: class {
 	var delegate: DetailInteractorDelegate? { get set }
+	func logEvent(withMovie movie: MovieResponseModel)
 }
 
 enum DetailInteractorOutput {
