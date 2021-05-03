@@ -7,7 +7,7 @@
 
 // MARK: - Interactor
 
-protocol SearchInteractorProtocol: class {
+protocol SearchInteractorProtocol: AnyObject {
 	var delegate: SearchInteractorDelegate? { get set }
 	func search(title: String)
 	func detail(withIndex index: Int)
@@ -47,16 +47,16 @@ enum SearchRoute {
 	case detail(MovieResponseModel)
 }
 
-protocol SearchRouterProtocol: class {
+protocol SearchRouterProtocol: AnyObject {
 	func navigate(to route: SearchRoute, delegate: SearchProtocol?)
 }
 
-protocol SearchProtocol: class {
+protocol SearchProtocol: AnyObject {
 	func reloadData()
 }
 
 // MARK: - View
 
-protocol SearchViewProtocol: class {
+protocol SearchViewProtocol: AnyObject {
 	func handleOutput(_ output: SearchPresenterOutput)
 }

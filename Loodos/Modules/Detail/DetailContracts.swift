@@ -7,7 +7,7 @@
 
 // MARK: - Interactor
 
-protocol DetailInteractorProtocol: class {
+protocol DetailInteractorProtocol: AnyObject {
 	var delegate: DetailInteractorDelegate? { get set }
 	func logEvent(withMovie movie: MovieResponseModel)
 }
@@ -36,12 +36,12 @@ enum DetailRoute {
 	case back
 }
 
-protocol DetailRouterProtocol: class {
+protocol DetailRouterProtocol: AnyObject {
 	func navigate(to route: DetailRoute)
 }
 
 // MARK: - View
 
-protocol DetailViewProtocol: class {
+protocol DetailViewProtocol: AnyObject {
 	func handleOutput(_ output: DetailPresenterOutput)
 }

@@ -7,7 +7,7 @@
 
 // MARK: - Interactor
 
-protocol SplashInteractorProtocol: class {
+protocol SplashInteractorProtocol: AnyObject {
 	var delegate: SplashInteractorDelegate? { get set }
 	func load()
 	func fetchRemoteConfigs()
@@ -43,12 +43,12 @@ enum SplashRoute {
 	case search
 }
 
-protocol SplashRouterProtocol: class {
+protocol SplashRouterProtocol: AnyObject {
 	func navigate(to route: SplashRoute)
 }
 
 // MARK: - View
 
-protocol SplashViewProtocol: class {
+protocol SplashViewProtocol: AnyObject {
 	func handleOutput(_ output: SplashPresenterOutput)
 }
