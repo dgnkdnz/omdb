@@ -27,7 +27,11 @@ final class SplashInteractor: SplashInteractorProtocol {
 	// MARK: - Interactor Methods
 	
 	func load() {
-		self.delegate?.handleOutput(.isConnectedToNetwork(self.networkService.isConnectedToNetwork()))
+		let isConnected = self.networkService.isConnectedToNetwork()
+		if !isConnected {
+			self.delegate?.handleOutput(.isLoading(false))
+		}
+		self.delegate?.handleOutput(.isConnectedToNetwork(isConnected))
 	}
 	
 	func fetchRemoteConfigs() {
@@ -54,11 +58,15 @@ final class SplashInteractor: SplashInteractorProtocol {
 					}
 					let value = self?.remoteConfigService.configValue(forKey: loodosKey).stringValue
 					DispatchQueue.main.async {
+						self?.delegate?.handleOutput(.isLoading(false))
 						self?.delegate?.handleOutput(.updateTitle(value ?? ""))
 					}
 				}
 			} else {
-				self.delegate?.handleOutput(.error(error?.localizedDescription ?? ""))
+				DispatchQueue.main.async { [weak self] in
+					self?.delegate?.handleOutput(.isLoading(false))
+					self?.delegate?.handleOutput(.error(error?.localizedDescription ?? ""))
+				}
 			}
 		}
 	}

@@ -29,6 +29,7 @@ final class SplashPresenter: SplashPresenterProtocol {
 	// MARK: - Presenter Methods
 	
 	func load() {
+		self.view?.handleOutput(.isLoading(true))
 		self.interactor.load()
 	}
 	
@@ -52,6 +53,9 @@ extension SplashPresenter: SplashInteractorDelegate {
 			break
 		case .error(let message):
 			self.view?.handleOutput(.error(message))
+			break
+		case .isLoading(let isLoading):
+			self.view?.handleOutput(.isLoading(isLoading))
 			break
 		}
 	}

@@ -13,7 +13,12 @@ final class SplashViewController: BaseViewController<SplashPresenter> {
 	
 	@IBOutlet private weak var titleLabel: UILabel!
 	
+	// MARK: - Private Variables
+	
 	private var isConnected = false
+	private weak var loadingView: LoadingView?
+	
+	// MARK: - Overrides
 	
 	override var preferredStatusBarStyle: UIStatusBarStyle {
 		return .default
@@ -21,6 +26,10 @@ final class SplashViewController: BaseViewController<SplashPresenter> {
 	
 	override func prepare() {
 		super.prepare()
+		
+		let lv = LoadingView(parentView: self.view)
+		self.loadingView = lv
+		
 		self.presenter.load()
 	}
 	
@@ -70,6 +79,10 @@ extension SplashViewController: SplashViewProtocol {
 			let ok = UIAlertAction(title: strOk, style: .default, handler: nil)
 			alert.addAction(ok)
 			self.present(alert, animated: true, completion: nil)
+			break
+		case .isLoading(let isLoading):
+			isLoading ? self.loadingView?.show() : self.loadingView?.hide()
+			break
 		}
 	}
 }
