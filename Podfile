@@ -1,4 +1,4 @@
-workspace 'Loodos.workspace'
+workspace 'Loodos'
 # platform :ios, '9.0'
 
 project 'Loodos', {
